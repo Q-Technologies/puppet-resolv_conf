@@ -1,0 +1,60 @@
+{
+  "name": "qtechnolgies-resolv_conf",
+  "version": "1.0.0",
+  "author": "qtechnolgies",
+  "summary": "Manages resolv.conf with sensibility checks.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/Q-Technologies/puppet-resolv_conf.git",
+  "project_page": "https://github.com/Q-Technologies/puppet-resolv_conf",
+  "issues_url": "https://github.com/Q-Technologies/puppet-resolv_conf/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 4.16.0"}
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem":"RedHat",
+      "operatingsystemrelease": [
+        "6.0",
+        "7.0"
+      ]
+    },
+    {
+      "operatingsystem":"Centos",
+      "operatingsystemrelease": [
+        "6.0",
+        "7.0"
+      ]
+    },
+    {
+      "operatingsystem":"OEL",
+      "operatingsystemrelease": [
+        "6.0",
+        "7.0"
+      ]
+    },
+    {
+      "operatingsystem":"Debian",
+      "operatingsystemrelease": [
+        "7.0",
+        "8.0"
+      ]
+    },
+    {
+      "operatingsystem":"Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04",
+        "16.04"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [ 
+        "11",
+        "12"
+     ]
+    }
+  ],
+  "data_provider": "hiera"
+}
+
