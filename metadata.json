@@ -1,7 +1,7 @@
 {
-  "name": "qtechnolgies-resolv_conf",
+  "name": "qtechnologies-resolv_conf",
   "version": "1.0.0",
-  "author": "qtechnolgies",
+  "author": "qtechnologies",
   "summary": "Manages resolv.conf with sensibility checks.",
   "license": "Apache-2.0",
   "source": "https://github.com/Q-Technologies/puppet-resolv_conf.git",
