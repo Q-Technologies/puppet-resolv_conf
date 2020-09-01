@@ -1,6 +1,7 @@
 # resolv_conf/data/common
 ---
 resolv_conf::path: /etc/resolv.conf
+resolv_conf::networkmanager_conf_path: /etc/NetworkManager/NetworkManager.conf
 resolv_conf::max_name_servers: 3
 resolv_conf::max_num_search: 6
 resolv_conf::max_len_search: 256

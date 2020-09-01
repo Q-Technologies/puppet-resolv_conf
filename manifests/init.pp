@@ -6,6 +6,7 @@ class resolv_conf(
   Integer $max_num_search,
   Integer $max_len_search,
   Integer $max_num_sortlist,
+  String $networkmanager_conf_path,
 
   # Class parameters are populated from module hiera data
   Collection $nameservers = ['127.0.0.1'],
@@ -46,6 +47,20 @@ class resolv_conf(
     fail ( "Exceeded maximum length of the search domains field (current:${$searchlist_str_len} \
 cf max:${max_len_search}). See man resolv.conf." )
   }
+
+  # Also need to make sure dhcp client will not overwrite - edit dhclient conf and remove DNS info
+
+  # Stop Network Manager from managing the file
+  ini_setting { 'network manager do dns':
+    ensure  => present,
+    path    => $networkmanager_conf_path,
+    section => 'main',
+    setting => 'dns',
+    value   => 'none',
+  }
+  # although it looks like it's still necessary to say PEERDNS="no" in the interface script
+
+
 
   # Write the actual resolv.conf
   file { $path:

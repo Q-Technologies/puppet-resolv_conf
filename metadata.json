@@ -1,6 +1,6 @@
 {
   "name": "qtechnologies-resolv_conf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "qtechnologies",
   "summary": "Manages resolv.conf with sensibility checks.",
   "license": "Apache-2.0",
@@ -8,39 +8,43 @@
   "project_page": "https://github.com/Q-Technologies/puppet-resolv_conf",
   "issues_url": "https://github.com/Q-Technologies/puppet-resolv_conf/issues",
   "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 4.16.0"}
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
   ],
+  "data_provider": "hiera",
   "operatingsystem_support": [
     {
-      "operatingsystem":"RedHat",
+      "operatingsystem": "RedHat",
       "operatingsystemrelease": [
         "6.0",
         "7.0"
       ]
     },
     {
-      "operatingsystem":"Centos",
+      "operatingsystem": "Centos",
       "operatingsystemrelease": [
         "6.0",
         "7.0"
       ]
     },
     {
-      "operatingsystem":"OEL",
+      "operatingsystem": "OEL",
       "operatingsystemrelease": [
         "6.0",
         "7.0"
       ]
     },
     {
-      "operatingsystem":"Debian",
+      "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "7.0",
         "8.0"
       ]
     },
     {
-      "operatingsystem":"Ubuntu",
+      "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
         "12.04",
         "14.04",
@@ -49,12 +53,19 @@
     },
     {
       "operatingsystem": "SLES",
-      "operatingsystemrelease": [ 
+      "operatingsystemrelease": [
         "11",
         "12"
-     ]
+      ]
     }
   ],
-  "data_provider": "hiera"
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "pdk-version": "1.18.1",
+  "template-url": "pdk-default#1.18.1",
+  "template-ref": "tags/1.18.1-0-g3d2e75c"
 }
-
